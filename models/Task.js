@@ -50,11 +50,9 @@ const taskSchema = new mongoose.Schema({
         type:String,
     },
     todoCheckList:[todoSchema],
-    progress:{
-        type:Number,
-        default:0
+    createdAt:{
+        type:Date,
     }
-
 })
 
 export default mongoose.model("tasks",taskSchema);

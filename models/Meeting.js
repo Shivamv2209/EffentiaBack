@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const MeetingSchema = new mongoose.Schema({
-    projectdId:{
+    projectId:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"Project",
     },
@@ -30,6 +30,12 @@ const MeetingSchema = new mongoose.Schema({
     }],
     summary:{
         type:String,
+    },
+    createdAt:{
+        type:Date,
+    },
+    completedAt:{
+        type:Date,
     }
 },{
     timestamps:true,

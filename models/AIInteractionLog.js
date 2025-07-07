@@ -6,7 +6,21 @@ const aiInteractionLogSchema = new mongoose.Schema({
   prompt: String,
   response: String,
   timestamp: { type: Date, default: Date.now },
-  source: { type: String, enum: ["chat", "meeting", "task", "summary"] }
+  source: { type: String, enum: ["chat", "meeting", "task", "summary"] },
+  contextType: {
+    type: String,
+    enum: ["task", "meeting", "project"],
+  },
+
+  contextId: {
+    type: mongoose.Schema.Types.ObjectId,
+    refPath: "contextType",
+  },
+
+  usedInDecision: {
+    type: Boolean,
+    default: false,
+  },
 });
 
-export default mongoose.model("aiInteractions","aiInteractionLogSchema");
+export default mongoose.model("aiInteractions", "aiInteractionLogSchema");
