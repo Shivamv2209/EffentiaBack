@@ -51,7 +51,6 @@ const taskSchema = new mongoose.Schema({
     },
     completedAt:{
         type:Date,
-        required:true,
     },
     todoCheckList:[todoSchema],
     createdAt:{
