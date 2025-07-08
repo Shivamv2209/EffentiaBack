@@ -49,6 +49,10 @@ const taskSchema = new mongoose.Schema({
     attachments:{
         type:String,
     },
+    completedAt:{
+        type:Date,
+        required:true,
+    },
     todoCheckList:[todoSchema],
     createdAt:{
         type:Date,
