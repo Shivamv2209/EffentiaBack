@@ -7,6 +7,9 @@ const ProjectSchema = new mongoose.Schema({
     description:{
         type:String,
     },
+    category:{
+        type:String,
+    },
     createdBy:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"users"
