@@ -52,7 +52,10 @@ const ProjectSchema = new mongoose.Schema({
   meetings:[{
     type:mongoose.Schema.Types.ObjectId,
     ref:"meetings",
-  }]
+  }],
+  createdAt:{
+    type:Date,
+  }
 },{
     timestamps:true
 });
